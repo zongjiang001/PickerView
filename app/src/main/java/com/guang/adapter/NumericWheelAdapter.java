@@ -1,4 +1,4 @@
-package com.contrarywind.adapter;
+package com.guang.adapter;
 
 
 /**

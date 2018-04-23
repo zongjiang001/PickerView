@@ -1,14 +1,15 @@
-package com.contrarywind.view;
+package com.guang.view;
 
 import android.view.View;
 
 
-import com.contrarywind.adapter.ArrayWheelAdapter;
-import com.contrarywind.adapter.NumericWheelAdapter;
-import com.contrarywind.lib.WheelView;
-import com.contrarywind.listener.OnItemSelectedListener;
-import com.contrarywind.utils.ChinaDate;
-import com.contrarywind.utils.LunarCalendar;
+import com.guang.R;
+import com.guang.adapter.ArrayWheelAdapter;
+import com.guang.adapter.NumericWheelAdapter;
+import com.guang.lib.WheelView;
+import com.guang.listener.OnItemSelectedListener;
+import com.guang.utils.ChinaDate;
+import com.guang.utils.LunarCalendar;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

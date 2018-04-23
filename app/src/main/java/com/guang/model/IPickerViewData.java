@@ -1,4 +1,4 @@
-package com.contrarywind.model;
+package com.guang.model;
 
 /**
  * Created by Sai on 2016/7/13.

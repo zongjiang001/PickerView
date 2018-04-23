@@ -1,4 +1,4 @@
-package com.contrarywind.view;
+package com.guang.view;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -15,8 +15,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
-import com.contrarywind.listener.OnDismissListener;
-import com.contrarywind.utils.PickerViewAnimateUtil;
+import com.guang.R;
+import com.guang.listener.OnDismissListener;
+import com.guang.utils.PickerViewAnimateUtil;
 
 
 /**

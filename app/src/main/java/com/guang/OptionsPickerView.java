@@ -1,4 +1,4 @@
-package com.contrarywind;
+package com.guang;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -12,11 +12,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import com.contrarywind.lib.WheelView;
-import com.contrarywind.listener.CustomListener;
-import com.contrarywind.view.BasePickerView;
-import com.contrarywind.view.R;
-import com.contrarywind.view.WheelOptions;
+import com.guang.lib.WheelView;
+import com.guang.listener.CustomListener;
+import com.guang.view.BasePickerView;
+import com.guang.view.WheelOptions;
 
 import java.util.List;
 

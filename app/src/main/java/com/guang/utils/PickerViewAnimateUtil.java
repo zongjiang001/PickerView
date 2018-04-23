@@ -1,8 +1,8 @@
-package com.contrarywind.utils;
+package com.guang.utils;
 
 import android.view.Gravity;
 
-import com.contrarywind.view.R;
+import com.guang.R;
 
 
 /**

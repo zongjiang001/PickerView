@@ -1,4 +1,4 @@
-package com.contrarywind.lib;
+package com.guang.lib;
 
 import android.view.MotionEvent;
 

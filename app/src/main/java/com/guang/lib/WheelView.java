@@ -1,4 +1,4 @@
-package com.contrarywind.lib;
+package com.guang.lib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -17,12 +17,11 @@ import android.view.MotionEvent;
 import android.view.View;
 
 
-import com.contrarywind.adapter.WheelAdapter;
-import com.contrarywind.listener.OnItemSelectedListener;
-import com.contrarywind.model.IPickerViewData;
-import com.contrarywind.view.R;
+import com.guang.R;
+import com.guang.adapter.WheelAdapter;
+import com.guang.listener.OnItemSelectedListener;
+import com.guang.model.IPickerViewData;
 
-import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;

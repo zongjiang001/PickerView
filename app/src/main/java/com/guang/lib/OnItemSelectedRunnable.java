@@ -1,4 +1,4 @@
-package com.contrarywind.lib;
+package com.guang.lib;
 
 final class OnItemSelectedRunnable implements Runnable {
     final WheelView loopView;

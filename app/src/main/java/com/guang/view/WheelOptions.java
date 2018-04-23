@@ -1,12 +1,13 @@
-package com.contrarywind.view;
+package com.guang.view;
 
 import android.graphics.Typeface;
 import android.view.View;
 
 
-import com.contrarywind.adapter.ArrayWheelAdapter;
-import com.contrarywind.lib.WheelView;
-import com.contrarywind.listener.OnItemSelectedListener;
+import com.guang.R;
+import com.guang.adapter.ArrayWheelAdapter;
+import com.guang.lib.WheelView;
+import com.guang.listener.OnItemSelectedListener;
 
 import java.util.List;
 
