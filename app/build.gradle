@@ -25,7 +25,6 @@ android {
     allprojects {
         tasks.withType(Javadoc) {//兼容中文字符
             options {
-                maven { url "https://jitpack.io" }
                 encoding "UTF-8"
                 charSet 'UTF-8'
                 links "http://docs.oracle.com/javase/7/docs/api"
