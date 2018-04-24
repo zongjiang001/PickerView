@@ -1,7 +1,7 @@
-apply plugin: 'com.android.application'
+//apply plugin: 'com.android.application'
 //apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
-//apply plugin: 'com.android.library'
+apply plugin: 'com.android.library'
 
 group='com.github.mark-time'
 
@@ -9,44 +9,108 @@ android {
     compileSdkVersion 26
     buildToolsVersion '27.0.3'
     defaultConfig {
-        applicationId "com.guang.timewheel"
+//        applicationId "com.guang.timewheel"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+//    sourceSets {
+//        main.java.srcDirs += 'src/main/kotlin'
+//    }
 
-    allprojects {
-        tasks.withType(Javadoc) {//兼容中文字符
-            options {
-                encoding "UTF-8"
-                charSet 'UTF-8'
-                links "http://docs.oracle.com/javase/7/docs/api"
-            }
-        }
-    }
+//    allprojects {
+//        tasks.withType(Javadoc) {//兼容中文字符
+//            options {
+//                encoding "UTF-8"
+//                charSet 'UTF-8'
+//                links "http://docs.oracle.com/javase/7/docs/api"
+//            }
+//        }
+//    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'com.android.support:appcompat-v7:26.1.0'
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+//    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-repositories {
-    mavenCentral()
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
 }
+
+task javadoc(type: Javadoc) {
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+//repositories {
+//    mavenCentral()
+//}
+//android {
+//    compileSdkVersion 23
+//    buildToolsVersion "23.0.2"
+//
+//    defaultConfig {
+//        minSdkVersion 21
+//        targetSdkVersion 23
+//        versionCode 1
+//        versionName "1.0"
+//        consumerProguardFiles 'proguard-rules.pro'
+//    }
+//}
+//
+//dependencies {
+//    // add dependencies here
+//}
+//
+//// build a jar with source files
+//task sourcesJar(type: Jar) {
+//    from android.sourceSets.main.java.srcDirs
+//    classifier = 'sources'
+//}
+//
+//task javadoc(type: Javadoc) {
+//    failOnError  false
+//    source = android.sourceSets.main.java.sourceFiles
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//    classpath += configurations.compile
+//}
+//
+//// build a jar with javadoc
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+//
+//artifacts {
+//    archives sourcesJar
+//    archives javadocJar
+//}
