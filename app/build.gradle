@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
 //apply plugin: 'com.android.library'
 
 group='com.github.mark-time'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.guang.timewheel"
         minSdkVersion 14
